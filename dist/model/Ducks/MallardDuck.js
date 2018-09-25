@@ -32,7 +32,7 @@ var MallardDuck = function (_Duck) {
   function MallardDuck() {
     _classCallCheck(this, MallardDuck);
 
-    return _possibleConstructorReturn(this, (MallardDuck.__proto__ || Object.getPrototypeOf(MallardDuck)).call(this, new _FlyWithWings2.default(), new _Quack2.default()));
+    return _possibleConstructorReturn(this, (MallardDuck.__proto__ || Object.getPrototypeOf(MallardDuck)).call(this, new _FlyWithWings2.default(), new _Quack2.default())); // this needs to be addressed - the number of parameters will only continue to grow
   }
 
   _createClass(MallardDuck, [{
