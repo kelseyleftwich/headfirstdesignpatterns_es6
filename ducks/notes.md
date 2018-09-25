@@ -5,3 +5,5 @@
 2. FlyBehavior interface and implementation classes
 3. QuackBehavior interface and implementation classes
 4. Main / test class (DuckSimulator)
+
+- [ ] Add class filenames to steps above where appropriate
