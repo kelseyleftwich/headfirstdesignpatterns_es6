@@ -1,4 +1,4 @@
-import FlyBehavior from '../Flying/FlyBehavior';
+import {override} from '../ClassUtilities';
 
 export default class Duck {
   constructor(flyBehavior, quackBehavior) {
@@ -7,17 +7,16 @@ export default class Duck {
       throw new TypeError("Cannot construct Abstract instances directly");
     }
 
-    // required overrides
-    if (this.display === undefined) {
-      throw new TypeError("Must override display method");
-    }
-
     this.flyBehavior = flyBehavior;
     this.quackBehavior = quackBehavior;
   }
 
   swim() {
     console.log('All ducks float, even decoys!');
+  }
+
+  display(){
+    override('display');
   }
 
   performFly() {

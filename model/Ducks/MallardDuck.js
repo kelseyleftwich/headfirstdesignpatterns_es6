@@ -4,7 +4,7 @@ import Quack from '../Quacking/Quack';
 
 export default class MallardDuck extends Duck {
   constructor() {
-    super(new FlyWithWings(), new Quack());
+    super(new FlyWithWings(), new Quack()); // this needs to be addressed - the number of parameters will only continue to grow
   }
 
   display() {
