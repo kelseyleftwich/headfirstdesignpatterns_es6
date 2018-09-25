@@ -10,11 +10,11 @@ var _Duck2 = require('./Duck');
 
 var _Duck3 = _interopRequireDefault(_Duck2);
 
-var _FlyWithWings = require('./FlyWithWings');
+var _FlyWithWings = require('../Flying/FlyWithWings');
 
 var _FlyWithWings2 = _interopRequireDefault(_FlyWithWings);
 
-var _Quack = require('./Quack');
+var _Quack = require('../Quacking/Quack');
 
 var _Quack2 = _interopRequireDefault(_Quack);
 

@@ -1,4 +1,4 @@
-import FlyBehavior from './FlyBehavior';
+import FlyBehavior from '../Flying/FlyBehavior';
 
 export default class Duck {
   constructor(flyBehavior, quackBehavior) {

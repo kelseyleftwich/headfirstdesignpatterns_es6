@@ -1,6 +1,6 @@
 import Duck from './Duck';
-import FlyWithWings from './FlyWithWings';
-import Quack from './Quack';
+import FlyWithWings from '../Flying/FlyWithWings';
+import Quack from '../Quacking/Quack';
 
 export default class MallardDuck extends Duck {
   constructor() {
