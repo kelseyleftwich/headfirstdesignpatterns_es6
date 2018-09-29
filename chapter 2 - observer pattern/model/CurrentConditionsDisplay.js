@@ -6,8 +6,7 @@ const CurrentConditionsDisplay = () => {
     let state = {
         temperature: null,
         humidity: null,
-        pressure: null,
-        unmodded: 'I don\'t get changed'
+        pressure: null
     };
 
     const update = (state, weatherData) => {

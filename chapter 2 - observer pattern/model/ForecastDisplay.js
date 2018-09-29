@@ -4,26 +4,31 @@ import  Display  from './Interfaces/Display';
 const ForecastDisplay = () => {
 
     let state = {
-        temperature: null,
-        humidity: null,
-        pressure: null,
-        unmodded: 'I don\'t get changed'
+        currentPressure: null,
+        previousPressure: null
     };
 
     const update = (state, weatherData) => {
         console.log('updating state...')
-        state.temperature = weatherData.temperature;
-        state.humidity = weatherData.humidity;
-        state.pressure = weatherData.pressure;
+        state.previousPressure = state.currentPressure;
+        state.currentPressure = weatherData.pressure;
         return state;
     };
 
     const display = (state) => {
         console.log('\n--------------------');
-        console.log('Current Conditions: ')
-        console.log(`Temperature: ${state.temperature}`);
-        console.log(`Humidity: ${state.humidity}`);
-        console.log(`Pressure: ${state.pressure}`);
+        console.log('Forecast: ')
+        const {currentPressure, previousPressure} = state;
+        if(previousPressure == null){
+            console.log('Not enough data!');
+        }
+        else if (currentPressure > previousPressure) {
+			console.log("Improving weather on the way!");
+		} else if (currentPressure == previousPressure) {
+			console.log("More of the same");
+		} else if (currentPressure < previousPressure) {
+			console.log("Watch out for cooler, rainy weather");
+		}
         console.log('--------------------\n');
 
     }

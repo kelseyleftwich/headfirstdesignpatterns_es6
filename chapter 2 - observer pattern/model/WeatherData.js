@@ -39,6 +39,10 @@ class WeatherData extends Subject {
         this.measurementsChanged();
     }
 
+    getPressure() {
+        return this.pressure;
+    }
+
 
 
 }
