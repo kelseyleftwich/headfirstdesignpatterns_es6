@@ -6,3 +6,5 @@ Recreating code exercises from *Head First Design Patterns* in ES6
 - By Bert Bates, Kathy Sierra, Eric Freeman, Elisabeth Robson
 - Publisher: O'Reilly Media
 - http://shop.oreilly.com/product/9780596007126.do
+
+When prompted by the book, I made class diagrams using PlantUML.
