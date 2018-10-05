@@ -1,4 +1,4 @@
-import {override} from '../ClassUtilities';
+import {override} from '../../ClassUtilities';
 export default class FlyBehavior {
   constructor() {
 

@@ -1,0 +1,53 @@
+@startuml
+' interfaces
+interface Beverage
+interface CondimentDecorator
+
+' concrete classes for Beverage interface
+class HouseBlend
+class DarkRoast
+class Expresso
+class Decaf
+HouseBlend --|> Beverage
+DarkRoast --|> Beverage
+Expresso --|> Beverage
+Decaf --|> Beverage
+
+' concrete classes for CondimentDecorator interface
+class Milk
+class Mocha
+class Soy
+class Whip
+Milk --|> CondimentDecorator
+Mocha --|> CondimentDecorator
+Soy --|> CondimentDecorator
+Whip --|> CondimentDecorator
+
+CondimentDecorator --> Beverage
+
+Beverage : description
+Beverage : getDescription()
+Beverage : cost()
+
+HouseBlend : cost()
+DarkRoast : cost()
+Expresso : cost()
+Decaf : cost()
+
+CondimentDecorator : getDescription()
+Milk : getDescription()
+Mocha : getDescription()
+Soy : getDescription()
+Whip : getDescription()
+Milk : cost()
+Mocha : cost()
+Soy : cost()
+Whip : cost()
+Milk : Beverage beverage
+Mocha : Beverage beverage
+Soy : Beverage beverage
+Whip : Beverage beverage
+
+
+
+@enduml
