@@ -3,6 +3,7 @@ import boxen from 'boxen';
 import DuckSimulator from './chapter 1 - strategy pattern/DuckSimulator';
 import WeatherStation from './chapter 2 - observer pattern/model/WeatherStation';
 import CoffeeHouse from './chapter 3 - decorator pattern/model/CoffeeHouse';
+import NYPizzaStore from './chapter 4 - factory pattern/NYPizzaStore';
 
 console.clear();
 
@@ -25,6 +26,17 @@ prompt.get(['design_pattern'], function (err, result) {
             console.log(boxen('Decorator', {padding: 1, borderColor: '#FFC300'}));
             const coffeeHouse = new CoffeeHouse();
             coffeeHouse.run();
+            break;
+        case 'factory':
+            console.log(boxen('Factory', {padding: 1, borderColor: '#FFC300'}));
+            const nyPizzaStore = new NYPizzaStore();
+            const cheesePizza = nyPizzaStore.orderPizza('cheese');
+            console.log(`Ordered a ${cheesePizza.name}`);
+            console.log('\n');
+
+            const pepperoniPizza = nyPizzaStore.orderPizza('pepperoni');
+            console.log(`Ordered a ${pepperoniPizza.name}`);
+
             break;
         default:
             console.log(boxen('Not a design pattern!', {padding: 1, borderColor: '#581845'}));
